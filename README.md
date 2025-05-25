@@ -49,3 +49,16 @@ Additionally, the system reduces manual workload for the HR department and minim
 2. **Manager**: Has all employee permissions plus the ability to approve/reject requests and grant leave (within system-defined limits).
 3. **Clerk (HR)**: Can view and manage employee data and perform administrative tasks like adding or removing records.
 4. **System Administrator**: Responsible for system maintenance, log file collection, and technical resources (web servers, databases, etc.).
+
+
+## Sequence Diagram
+
+1. Employee :
+![Employee Sequence Diagram](imgs/Employee.jpeg)
+
+2. Manager :
+![Manager Sequence Diagram](imgs/Employee.jpeg)
+
+
+
+
