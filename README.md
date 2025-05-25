@@ -59,6 +59,8 @@ Additionally, the system reduces manual workload for the HR department and minim
 2. Manager :
 ![Manager Sequence Diagram](imgs/Employee.jpeg)
 
+## FlowChart :
 
+![FlowChart](imgs/FlowChart.png)
 
 
