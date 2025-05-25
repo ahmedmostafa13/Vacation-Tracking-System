@@ -61,6 +61,10 @@ Additionally, the system reduces manual workload for the HR department and minim
 
 ## ERD :
 
-![ERD](imgs/FlowChart.png)
+![ERD](imgs/ERD.png)
+
+## FlowChart :
+
+![FLOW](imgs/flow.excalidraw.png)
 
 
