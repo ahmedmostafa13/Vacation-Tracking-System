@@ -1,4 +1,19 @@
 # Vacation-Tracking-System
+
+## Table of Contents
+
+- [Domain](#domain)
+- [Vision](#vision)
+- [Functional Requirements](#functional-requirements)
+- [Non-Functional Requirements](#non-functional-requirements)
+- [Constraints](#constraints)
+- [Actors](#actors)
+- [Sequence Diagram](#sequence-diagram)
+  - [Employee](#employee-)
+  - [Manager](#manager-)
+- [ERD](#erd-)
+- [FlowChart](#flowchart-)
+----
 ## Domain
 
 In many companies today, employees face a time-consuming and inefficient process when requesting vacation time. They must go through several manual steps and wait days to complete a simple task that could otherwise take only minutes. This inefficiency leads to wasted effort and delays.
@@ -59,12 +74,25 @@ Additionally, the system reduces manual workload for the HR department and minim
 2. Manager :
 ![Manager Sequence Diagram](imgs/manager.jpeg)
 
+3.Request
+   a. withdraw request
+   ![withdraw](imgs/Withdraw.jpg)
+
+   b. edit pending request
+   ![Pending](imgs/PendingRequest.jpg)
+
+   c. Cancel request
+   ![cancel](imgs/Cancell.jpg)
+
 ## ERD :
 
 ![ERD](imgs/ERD.png)
 
 ## FlowChart :
 
-![FLOW](imgs/flow.excalidraw.png)
+1. Employee
+   ![FLOW](imgs/flow.excalidraw.png)
+
+2.
 
 
