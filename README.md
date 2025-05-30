@@ -75,14 +75,18 @@ Additionally, the system reduces manual workload for the HR department and minim
 ![Manager Sequence Diagram](imgs/manager.jpeg)
 
 3.Request
+
    a. withdraw request
+   
    ![withdraw](imgs/Withdraw.jpg)
 
    b. edit pending request
+   
    ![Pending](imgs/PendingRequest.jpg)
 
    c. Cancel request
-   ![cancel](imgs/Cancell.jpg)
+   
+   ![cancel](imgs/Cancell.png)
 
 ## ERD :
 
