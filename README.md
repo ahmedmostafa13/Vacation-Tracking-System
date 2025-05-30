@@ -2,101 +2,138 @@
 
 ## Table of Contents
 
+- [Introduction](#introduction)
 - [Domain](#domain)
 - [Vision](#vision)
 - [Functional Requirements](#functional-requirements)
 - [Non-Functional Requirements](#non-functional-requirements)
 - [Constraints](#constraints)
 - [Actors](#actors)
-- [Sequence Diagram](#sequence-diagram)
-  - [Employee](#employee-)
-  - [Manager](#manager-)
-- [ERD](#erd-)
-- [FlowChart](#flowchart-)
-----
+- [Sequence Diagrams](#sequence-diagrams)
+- [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
+- [Flowcharts](#flowcharts)
+
+---
+
+## Introduction
+
+**Vacation Tracking System (VTS)** is an internal application designed to streamline and digitize the process of requesting, approving, and managing employee vacations within a company.
+
+---
+
 ## Domain
 
-In many companies today, employees face a time-consuming and inefficient process when requesting vacation time. They must go through several manual steps and wait days to complete a simple task that could otherwise take only minutes. This inefficiency leads to wasted effort and delays.
+Many companies rely on outdated and manual methods for handling vacation requests. Employees are often forced to navigate inefficient processes, involving paperwork and delays, just to request time off. This system aims to modernize that experience.
+
+---
 
 ## Vision
 
-The **Vacation Tracking System (VTS)** aims to replace the manual and lengthy vacation request process with a digital solution. It provides employees with a way to manage and track their vacation time requests without needing to understand complex rules or company policies—giving them a sense of empowerment.
-Additionally, the system reduces manual workload for the HR department and minimizes non-core managerial tasks that are not directly related to the company’s core business operations.
+The **Vacation Tracking System (VTS)** replaces the manual vacation process with a simple, fast, and digital alternative. It empowers employees to manage their vacations easily and relieves HR and managers from unnecessary administrative burdens. VTS also integrates with existing systems to ensure seamless data management.
+
+---
 
 ## Functional Requirements
 
-1. **Employees** can:
-   - Create vacation time requests.
-   - View their requests from the past 6 months up to 18 months into the future.
-   - Cancel their own requests.
+### Employees can:
+- Submit vacation requests.
+- View their requests from the past 6 months up to 18 months into the future.
+- Cancel their own requests.
 
-2. **Managers** can:
-   - Approve or reject vacation requests.
-   - Award personal leave time to employees within predefined limits.
+### Managers can:
+- Approve or reject requests.
+- Grant personal leave to employees (within policy-defined limits).
 
-3. The system will:
-   - Send email notifications for:
-     - Requesting manager approval.
-     - Notifying employees of request status updates.
-   - Validate and verify leave requests against company policies and rules.
-   - Provide a Web Service API for integration with other internal systems.
-   - Interface with legacy HR systems to retrieve and update employee data.
-   - Log all transactions for auditing and traceability.
-   - Allow HR and System Admins to override restricted actions with proper logging.
+### The system will:
+- Send email notifications for:
+  - Manager approval requests.
+  - Request status updates to employees.
+- Validate leave requests based on company policy.
+- Provide a Web Service API for internal integrations.
+- Interface with legacy HR systems for data synchronization.
+- Log all transactions for auditing purposes.
+- Allow HR and System Admins to override restricted actions (with logging).
+
+---
 
 ## Non-Functional Requirements
 
-1. **Usability**: The system should be user-friendly and intuitive.
-2. **Security**: Authentication must be handled through the existing single-sign-on mechanism.
-3. **Reusability**: The system must leverage existing hardware and middleware.
+- **Usability**: Intuitive and user-friendly interface.
+- **Security**: Integrated with existing single-sign-on (SSO).
+- **Reusability**: Leverage existing hardware/middleware.
 
-
+---
 
 ## Constraints
 
-1. Must be implemented as an extension of the existing intranet portal.
-2. Must use existing hardware and middleware components.
-3. Must rely on the portal’s single-sign-on system for all authentication.
+- Must be integrated within the existing intranet portal.
+- Should utilize current infrastructure (hardware & middleware).
+- Authentication must rely on the existing SSO system.
+
+---
 
 ## Actors
 
-1. **Employee**: A user who manages their own vacation requests (create, view, cancel).
-2. **Manager**: Has all employee permissions plus the ability to approve/reject requests and grant leave (within system-defined limits).
-3. **Clerk (HR)**: Can view and manage employee data and perform administrative tasks like adding or removing records.
-4. **System Administrator**: Responsible for system maintenance, log file collection, and technical resources (web servers, databases, etc.).
+| Actor              | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| **Employee**       | Can request, view, and cancel their own vacations.                          |
+| **Manager**        | Can perform employee actions + approve/reject requests + grant leave.       |
+| **Clerk (HR)**     | Manages employee data and admin records.                                    |
+| **System Admin**   | Handles system operations and technical maintenance (e.g., logs, servers).  |
 
+---
 
-## Sequence Diagram
+## Sequence Diagrams
 
-1. Employee :
+### 1. Employee Actions
+
 ![Employee Sequence Diagram](imgs/Employee.jpeg)
 
-2. Manager :
+### 2. Manager Actions
+
 ![Manager Sequence Diagram](imgs/manager.jpeg)
 
-3.Request
+### 3. Request Scenarios
 
-   a. withdraw request
-   
-   ![withdraw](imgs/Withdraw.jpg)
+- **Withdraw request**  
+  ![Withdraw Request](imgs/Withdraw.jpg)
 
-   b. edit pending request
-   
-   ![Pending](imgs/PendingRequest.jpg)
+- **Edit pending request**  
+  ![Edit Pending Request](imgs/PendingRequest.jpg)
 
-   c. Cancel request
-   
-   ![cancel](imgs/Cancell.png)
+- **Cancel request**  
+  ![Cancel Request](imgs/Cancell.png)
 
-## ERD :
+---
 
-![ERD](imgs/ERD.png)
+## Entity Relationship Diagram (ERD)
 
-## FlowChart :
+This diagram outlines the relationships between system entities such as `Employee`, `Request`, `Manager`, etc.
 
-1. Employee
-   ![FLOW](imgs/flow.excalidraw.png)
+![ERD Diagram](imgs/ERD.png)
 
-2.
+---
+
+## Flowcharts
+
+### 1. General Employee Flow
+
+![Employee Vacation Request Flow](imgs/flow.excalidraw.png)
+
+### 2. Withdraw Request Flow
+
+![Withdraw Flowchart](imgs/WithdrawRequestFlowChart.png)
+
+### 3. Edit Pending Request Flow
+
+![Edit Pending Request Flowchart](imgs/PendingrequestFlowChart.png)
+
+### 4. Cancel Request Flow
+
+![Cancel Request Flowchart](imgs/CancelRequestFlowChart.png)
+
+---
+
+
 
 
